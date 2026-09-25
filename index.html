@@ -88,16 +88,18 @@ tailwind.config = {
 < class="antialiased">
 
 <!-- ===== NAV ===== -->
-<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur">
-  <div class="max-w-7xl mx-auto px-6 min-h-28 py-2 flex items-center justify-between gap-4">
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur shadow-sm">
+  <div class="max-w-7xl mx-auto px-6 min-h-36 py-5 flex items-center justify-between gap-4">
     <a href="#home" data-nav="home" class="flex items-center gap-3 shrink-0">
-      <img src="hd_CRWG_LOGO.png" alt="CRWG" class="logo-img h-25 w-25 object-contain">
+      <span class="block h-16 w-16 overflow-hidden rounded-md flex items-center justify-center shrink-0">
+        <img src="hd_CRWG_LOGO.png" alt="CRWG" class="logo-img h-full w-full object-contain scale-150">
+      </span>
       <span class="leading-tight">
         <span class="block font-display text-2xl font-semibold text-ink tracking-tight">CRWG</span>
         <span class="block text-sm tracking-[.18em] uppercase text-skydeep max-w-[180px]">Climate Risk Women Global</span>
       </span>
     </a>
-    <nav class="hidden lg:flex items-center gap-5 text-base font-medium text-ink/75 flex-nowrap">
+    <nav class="hidden lg:flex items-center gap-6 text-xl font-semibold text-ink/80 flex-nowrap">
       <a href="#home"     data-nav="home"     class="nav-link hover:text-skydeep transition whitespace-nowrap">Home</a>
       <a href="#about"    data-nav="about"    class="nav-link hover:text-skydeep transition whitespace-nowrap">About</a>
       <a href="#research" data-nav="research" class="nav-link hover:text-skydeep transition whitespace-nowrap">Research</a>
@@ -124,6 +126,7 @@ tailwind.config = {
     </div>
   </div>
 </header>
+
 
 <main class="pt-36 lg:pt-32">
 
