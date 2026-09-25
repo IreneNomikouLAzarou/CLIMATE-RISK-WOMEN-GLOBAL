@@ -88,31 +88,31 @@ tailwind.config = {
 < class="antialiased">
 
 <!-- ===== NAV ===== -->
-<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur er-b er-ink/10">
-  <div class="max-w-7xl mx-auto px-6 h-30 flex items-center justify-between">
-    <a href="#home" data-nav="home" class="flex items-center gap-3">
-      <img src="hd_CRWG_LOGO.png" alt="CRWG" class="logo-img h-29 w-30 object-contain">
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-ink/10">
+  <div class="max-w-7xl mx-auto px-6 min-h-24 py-2 flex items-center justify-between gap-4">
+    <a href="#home" data-nav="home" class="flex items-center gap-3 shrink-0">
+      <img src="hd_CRWG_LOGO.png" alt="CRWG" class="logo-img h-14 w-14 object-contain">
       <span class="leading-tight">
         <span class="block font-display text-2xl font-semibold text-ink tracking-tight">CRWG</span>
-        <span class="block text-sm tracking-[.18em] uppercase text-skydeep">Climate Risk Women Global</span>
+        <span class="block text-sm tracking-[.18em] uppercase text-skydeep max-w-[180px]">Climate Risk Women Global</span>
       </span>
     </a>
-    <nav class="hidden lg:flex items-center gap-7 text-lg font-medium text-ink/75">
-      <a href="#home"     data-nav="home"     class="nav-link hover:text-skydeep transition">Home</a>
-      <a href="#about"    data-nav="about"    class="nav-link hover:text-skydeep transition">About</a>
-      <a href="#research" data-nav="research" class="nav-link hover:text-skydeep transition">Research</a>
-      <a href="#network"  data-nav="network"  class="nav-link hover:text-skydeep transition">Network</a>
-      <a href="#events"   data-nav="events"   class="nav-link hover:text-skydeep transition">Events</a>
-      <a href="#support"  data-nav="support"  class="nav-link hover:text-skydeep transition">Support us</a>
-      <a href="#contact"  data-nav="contact"  class="nav-link hover:text-skydeep transition">Contact</a>
+    <nav class="hidden lg:flex items-center gap-5 text-base font-medium text-ink/75 flex-nowrap">
+      <a href="#home"     data-nav="home"     class="nav-link hover:text-skydeep transition whitespace-nowrap">Home</a>
+      <a href="#about"    data-nav="about"    class="nav-link hover:text-skydeep transition whitespace-nowrap">About</a>
+      <a href="#research" data-nav="research" class="nav-link hover:text-skydeep transition whitespace-nowrap">Research</a>
+      <a href="#network"  data-nav="network"  class="nav-link hover:text-skydeep transition whitespace-nowrap">Network</a>
+      <a href="#events"   data-nav="events"   class="nav-link hover:text-skydeep transition whitespace-nowrap">Events</a>
+      <a href="#support"  data-nav="support"  class="nav-link hover:text-skydeep transition whitespace-nowrap">Support us</a>
+      <a href="#contact"  data-nav="contact"  class="nav-link hover:text-skydeep transition whitespace-nowrap">Contact</a>
     </nav>
-    <a href="#support" data-nav="support" class="hidden sm:inline-flex items-center gap-2 bg-skydeep text-white px-5 py-2.5 rounded-full text-lg font-medium hover:bg-blue transition">
+    <a href="#support" data-nav="support" class="hidden sm:inline-flex items-center gap-2 bg-skydeep text-white px-5 py-2.5 rounded-full text-base font-medium hover:bg-blue transition shrink-0 whitespace-nowrap">
       Partner with us
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
   <!-- mobile nav -->
-  <div class="lg:hidden er-t er-ink/10 bg-white">
+  <div class="lg:hidden border-t border-ink/10 bg-white">
     <div class="max-w-7xl mx-auto px-6 py-3 flex gap-5 overflow-x-auto text-lg font-medium text-ink/70">
       <a href="#home"     data-nav="home"     class="whitespace-nowrap">Home</a>
       <a href="#about"    data-nav="about"    class="whitespace-nowrap">About</a>
