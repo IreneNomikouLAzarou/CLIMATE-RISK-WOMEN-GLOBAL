@@ -29,7 +29,7 @@ tailwind.config = {
       },
       fontFamily: {
         display: ['Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        : ['Inter', 'system-ui', 'sans-serif'],
       }
     }
   }
@@ -37,7 +37,7 @@ tailwind.config = {
 </script>
 <style>
   html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; background:#fff; color:#1b2a3a; }
+   { font-family: 'Inter', sans-serif; background:#fff; color:#1b2a3a; }
   /* headings set straight and upright — no slant, no optical skew */
   h1, h2, h3, h4 { font-style: normal; }
   .font-display { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-style: normal; letter-spacing: -0.02em; }
@@ -85,7 +85,7 @@ tailwind.config = {
   }
 </style>
 </head>
-<body class="antialiased">
+< class="antialiased">
 
 <!-- ===== NAV ===== -->
 <header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-ink/10">
@@ -97,7 +97,7 @@ tailwind.config = {
         <span class="block text-[10px] tracking-[.18em] uppercase text-skydeep">Climate Risk Women Global</span>
       </span>
     </a>
-    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-ink/75">
+    <nav class="hidden lg:flex items-center gap-7 text-lg font-medium text-ink/75">
       <a href="#home"     data-nav="home"     class="nav-link hover:text-skydeep transition">Home</a>
       <a href="#about"    data-nav="about"    class="nav-link hover:text-skydeep transition">About</a>
       <a href="#research" data-nav="research" class="nav-link hover:text-skydeep transition">Research</a>
@@ -106,14 +106,14 @@ tailwind.config = {
       <a href="#support"  data-nav="support"  class="nav-link hover:text-skydeep transition">Support us</a>
       <a href="#contact"  data-nav="contact"  class="nav-link hover:text-skydeep transition">Contact</a>
     </nav>
-    <a href="#support" data-nav="support" class="hidden sm:inline-flex items-center gap-2 bg-skydeep text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue transition">
+    <a href="#support" data-nav="support" class="hidden sm:inline-flex items-center gap-2 bg-skydeep text-white px-5 py-2.5 rounded-full text-lg font-medium hover:bg-blue transition">
       Partner with us
       <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
     </a>
   </div>
   <!-- mobile nav -->
   <div class="lg:hidden border-t border-ink/10 bg-white">
-    <div class="max-w-7xl mx-auto px-6 py-3 flex gap-5 overflow-x-auto text-sm font-medium text-ink/70">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex gap-5 overflow-x-auto text-lg font-medium text-ink/70">
       <a href="#home"     data-nav="home"     class="whitespace-nowrap">Home</a>
       <a href="#about"    data-nav="about"    class="whitespace-nowrap">About</a>
       <a href="#research" data-nav="research" class="whitespace-nowrap">Research</a>
@@ -139,7 +139,7 @@ tailwind.config = {
       <div class="lg:col-span-6">
         <img src="assets/logo.png" alt="Climate Risk Women Global"
              class="logo-img h-20 md:h-24 w-auto mb-8">
-        <span class="inline-flex items-center gap-2 text-xs tracking-[.22em] uppercase text-ink/50 mb-6">
+        <span class="inline-flex items-center gap-2 text-lg tracking-[.22em] uppercase text-ink/50 mb-6">
           <span class="w-8 h-px bg-violet"></span> Global research network · Est. 2024 / AMKE 2026
         </span>
         <h1 class="font-display text-4xl md:text-6xl leading-[1.05] font-semibold text-ink">
@@ -165,23 +165,23 @@ tailwind.config = {
       <div class="lg:col-span-6">
         <!-- the visual: stat card, floating over the full-hero network texture -->
         <div class="bg-white/90 backdrop-blur-sm text-ink rounded-3xl p-8 shadow-2xl border border-ink/5">
-          <p class="text-xs tracking-[.2em] uppercase text-violet font-semibold mb-5">Why representation matters</p>
+          <p class="text-lg tracking-[.2em] uppercase text-violet font-semibold mb-5">Why representation matters</p>
           <div class="flex items-end gap-3 mb-2">
             <span class="font-display text-6xl font-semibold text-teal">22.9%</span>
-            <span class="text-sm text-ink/60 mb-2 leading-tight">of research teams<br>at COP30 (2025)</span>
+            <span class="text-lg text-ink/60 mb-2 leading-tight">of research teams<br>at COP30 (2025)</span>
           </div>
-          <p class="text-sm text-ink/70 leading-relaxed mb-6">
+          <p class="text-lg text-ink/70 leading-relaxed mb-6">
             were majority female. At the same time, women remain underrepresented as
             first and last authors in climate research (Danilenko et al., 2024).
           </p>
-          <div class="border-t border-ink/10 pt-5 grid grid-cols-2 gap-4 text-sm">
+          <div class="border-t border-ink/10 pt-5 grid grid-cols-2 gap-4 text-lg">
             <div>
               <span class="block font-display text-2xl font-semibold text-teal">30%</span>
-              <span class="text-ink/60 text-xs">first authors</span>
+              <span class="text-ink/60 text-lg">first authors</span>
             </div>
             <div>
               <span class="block font-display text-2xl font-semibold text-teal">28.8%</span>
-              <span class="text-ink/60 text-xs">last authors</span>
+              <span class="text-ink/60 text-lg">last authors</span>
             </div>
           </div>
         </div>
@@ -193,24 +193,24 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 -mt-12 md:-mt-16 relative z-10">
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <a href="#about" data-nav="about" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
-        <span class="block font-display text-sm text-skydeep font-semibold mb-3">01</span>
+        <span class="block font-display text-lg text-skydeep font-semibold mb-3">01</span>
         <h3 class="font-display text-lg font-semibold text-ink mb-2">Who we are</h3>
-        <p class="text-sm text-ink/60 leading-relaxed">An interdisciplinary network of women researchers in climate risk.</p>
+        <p class="text-lg text-ink/60 leading-relaxed">An interdisciplinary network of women researchers in climate risk.</p>
       </a>
       <a href="#research" data-nav="research" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
-        <span class="block font-display text-sm text-skydeep font-semibold mb-3">02</span>
+        <span class="block font-display text-lg text-skydeep font-semibold mb-3">02</span>
         <h3 class="font-display text-lg font-semibold text-ink mb-2">Our research</h3>
-        <p class="text-sm text-ink/60 leading-relaxed">Five working papers and twelve interdisciplinary focus groups.</p>
+        <p class="text-lg text-ink/60 leading-relaxed">Five working papers and twelve interdisciplinary focus groups.</p>
       </a>
       <a href="#network" data-nav="network" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
-        <span class="block font-display text-sm text-skydeep font-semibold mb-3">03</span>
+        <span class="block font-display text-lg text-skydeep font-semibold mb-3">03</span>
         <h3 class="font-display text-lg font-semibold text-ink mb-2">Our network</h3>
-        <p class="text-sm text-ink/60 leading-relaxed">Founders and members across disciplines and geographies.</p>
+        <p class="text-lg text-ink/60 leading-relaxed">Founders and members across disciplines and geographies.</p>
       </a>
       <a href="#support" data-nav="support" class="group bg-gradient-to-br from-skydeep to-violet text-white rounded-2xl p-7 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
-        <span class="block font-display text-sm text-white/80 font-semibold mb-3">04</span>
+        <span class="block font-display text-lg text-white/80 font-semibold mb-3">04</span>
         <h3 class="font-display text-lg font-semibold mb-2">Fund our work</h3>
-        <p class="text-sm text-white/80 leading-relaxed">Support rigorous, inclusive climate research and the women who produce it.</p>
+        <p class="text-lg text-white/80 leading-relaxed">Support rigorous, inclusive climate research and the women who produce it.</p>
       </a>
     </div>
   </div>
@@ -219,7 +219,7 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 py-20 md:py-24">
     <div class="grid lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-5">
-        <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-4">Our mission</p>
+        <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-4">Our mission</p>
         <h2 class="font-display text-3xl md:text-4xl font-semibold text-ink leading-tight">
           Representation is not symbolic. It is a precondition for research that works.
         </h2>
@@ -244,7 +244,7 @@ tailwind.config = {
 <section id="page-about" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Who we are</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Who we are</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">
         An interdisciplinary network with a single purpose.
       </h1>
@@ -254,7 +254,7 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
     <div class="grid lg:grid-cols-12 gap-16">
       <div class="lg:col-span-4">
-        <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-4">Our story</p>
+        <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-4">Our story</p>
         <h2 class="font-display text-2xl md:text-3xl font-semibold text-ink leading-tight">
           2024 to 2026: from an informal collaboration to an institution.
         </h2>
@@ -272,7 +272,7 @@ tailwind.config = {
           how climate risk is experienced, measured and mitigated in the real world.
         </p>
         <div class="pt-4 border-t border-ink/10">
-          <p class="text-base text-ink/60 italic">
+          <p class="text-xl text-ink/60 italic">
             “We believe that representation is not a symbolic goal but a precondition for
             research that actually works — and that diverse teams produce more robust,
             more equitable climate solutions.”
@@ -283,24 +283,24 @@ tailwind.config = {
 
     <div class="mt-20 grid md:grid-cols-4 gap-6">
       <div class="border-t-2 border-skydeep pt-6">
-        <span class="font-display text-sm text-skydeep font-semibold">01</span>
+        <span class="font-display text-lg text-skydeep font-semibold">01</span>
         <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Deep expertise</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Specialists across climate, finance, health, engineering and social science.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Specialists across climate, finance, health, engineering and social science.</p>
       </div>
       <div class="border-t-2 border-skydeep pt-6">
-        <span class="font-display text-sm text-skydeep font-semibold">02</span>
+        <span class="font-display text-lg text-skydeep font-semibold">02</span>
         <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Shared frameworks</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Common methods and metrics that allow insights to travel across disciplines.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Common methods and metrics that allow insights to travel across disciplines.</p>
       </div>
       <div class="border-t-2 border-violet pt-6">
-        <span class="font-display text-sm text-violet font-semibold">03</span>
+        <span class="font-display text-lg text-violet font-semibold">03</span>
         <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Collaborative projects</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Joint working papers, proposals and project submissions with our partners.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Joint working papers, proposals and project submissions with our partners.</p>
       </div>
       <div class="border-t-2 border-violet pt-6">
-        <span class="font-display text-sm text-violet font-semibold">04</span>
+        <span class="font-display text-lg text-violet font-semibold">04</span>
         <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Real-world impact</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Evidence translated into policy influence and on-the-ground action.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Evidence translated into policy influence and on-the-ground action.</p>
       </div>
     </div>
   </div>
@@ -310,7 +310,7 @@ tailwind.config = {
 <section id="page-research" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Research &amp; working papers</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Research &amp; working papers</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">
         Evidence generation as our core activity.
       </h1>
@@ -323,8 +323,8 @@ tailwind.config = {
 
   <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
     <div class="flex flex-wrap gap-2 border-b border-ink/15 mb-10" id="research-tabs">
-      <button class="tab-btn active px-5 py-3 text-sm font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="papers">Working papers</button>
-      <button class="tab-btn px-5 py-3 text-sm font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="groups">Focus groups</button>
+      <button class="tab-btn active px-5 py-3 text-lg font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="papers">Working papers</button>
+      <button class="tab-btn px-5 py-3 text-lg font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="groups">Focus groups</button>
     </div>
 
     <div id="tab-papers" class="tab-panel active">
@@ -336,7 +336,7 @@ tailwind.config = {
             <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
           </div>
           <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Climate-linked AI and neuro-health outcomes</h3>
-          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+          <p class="text-lg text-ink/65 leading-relaxed mb-4">
             Exploring how AI-enabled climate analytics can support understanding of
             neurological and public-health impacts of climate stressors.
           </p>
@@ -353,7 +353,7 @@ tailwind.config = {
             <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
           </div>
           <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Agricultural insurance under climate stress — evidence from India</h3>
-          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+          <p class="text-lg text-ink/65 leading-relaxed mb-4">
             Assessing the role of insurance instruments in protecting smallholder farmers
             against climate-driven income shocks.
           </p>
@@ -370,7 +370,7 @@ tailwind.config = {
             <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
           </div>
           <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Physical risk, tipping points and systemic financial exposure</h3>
-          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+          <p class="text-lg text-ink/65 leading-relaxed mb-4">
             Linking climate tipping points to physical risk transmission across financial
             and real-estate systems.
           </p>
@@ -388,7 +388,7 @@ tailwind.config = {
             <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
           </div>
           <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Aquaculture and fisheries in a changing climate</h3>
-          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+          <p class="text-lg text-ink/65 leading-relaxed mb-4">
             Climate risk, adaptation capacity and resilience pathways for aquaculture and
             coastal fishing communities.
           </p>
@@ -405,7 +405,7 @@ tailwind.config = {
             <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
           </div>
           <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Insurance, risk transfer and climate resilience</h3>
-          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+          <p class="text-lg text-ink/65 leading-relaxed mb-4">
             How insurance and risk-transfer mechanisms can be redesigned to serve
             climate-vulnerable populations.
           </p>
@@ -415,25 +415,25 @@ tailwind.config = {
           </div>
         </article>
       </div>
-      <p class="text-xs text-ink/45 mt-8 italic">
+      <p class="text-lg text-ink/45 mt-8 italic">
         Working papers are authored by CRWG founders and network members. Full texts available upon request.
       </p>
     </div>
 
     <div id="tab-groups" class="tab-panel">
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Aquaculture &amp; Fisheries</h4><p class="text-sm text-ink/60">Climate resilience in marine and coastal systems.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Urban Systems</h4><p class="text-sm text-ink/60">Heat, flooding and adaptation in cities.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Economics, Real Estate &amp; Finance</h4><p class="text-sm text-ink/60">Valuation, exposure and financial stability.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Physical Risk &amp; Systemic Change</h4><p class="text-sm text-ink/60">Tipping points and cascading risk.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Cultural Heritage</h4><p class="text-sm text-ink/60">Protecting heritage under climate threat.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">AI &amp; Data Science</h4><p class="text-sm text-ink/60">Modelling, prediction and climate analytics.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Public Health &amp; Pharmacology</h4><p class="text-sm text-ink/60">Health impacts and pharmaceutical response.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Biology &amp; Neuroscience</h4><p class="text-sm text-ink/60">Physiological and cognitive climate effects.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Complexity Science &amp; Econophysics</h4><p class="text-sm text-ink/60">Systemic modelling of coupled systems.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Critical Infrastructure &amp; Energy</h4><p class="text-sm text-ink/60">Grids, energy and resilience planning.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Psychology &amp; Communication</h4><p class="text-sm text-ink/60">Behaviour, risk perception and narrative.</p></div>
-        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Climate Science &amp; Geography</h4><p class="text-sm text-ink/60">Physical processes and spatial risk.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Aquaculture &amp; Fisheries</h4><p class="text-lg text-ink/60">Climate resilience in marine and coastal systems.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Urban Systems</h4><p class="text-lg text-ink/60">Heat, flooding and adaptation in cities.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Economics, Real Estate &amp; Finance</h4><p class="text-lg text-ink/60">Valuation, exposure and financial stability.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Physical Risk &amp; Systemic Change</h4><p class="text-lg text-ink/60">Tipping points and cascading risk.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Cultural Heritage</h4><p class="text-lg text-ink/60">Protecting heritage under climate threat.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">AI &amp; Data Science</h4><p class="text-lg text-ink/60">Modelling, prediction and climate analytics.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Public Health &amp; Pharmacology</h4><p class="text-lg text-ink/60">Health impacts and pharmaceutical response.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Biology &amp; Neuroscience</h4><p class="text-lg text-ink/60">Physiological and cognitive climate effects.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Complexity Science &amp; Econophysics</h4><p class="text-lg text-ink/60">Systemic modelling of coupled systems.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Critical Infrastructure &amp; Energy</h4><p class="text-lg text-ink/60">Grids, energy and resilience planning.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Psychology &amp; Communication</h4><p class="text-lg text-ink/60">Behaviour, risk perception and narrative.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Climate Science &amp; Geography</h4><p class="text-lg text-ink/60">Physical processes and spatial risk.</p></div>
       </div>
     </div>
   </div>
@@ -443,7 +443,7 @@ tailwind.config = {
 <section id="page-network" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Our network</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Our network</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Founders &amp; members.</h1>
       <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
         CRWG is built on the expertise of its founders and an expanding network of researchers
@@ -457,8 +457,8 @@ tailwind.config = {
       <div class="bg-ice rounded-2xl p-8 border border-ink/10">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-skydeep to-violet text-white flex items-center justify-center font-display text-xl font-semibold mb-5">IN</div>
         <h3 class="font-display text-2xl font-semibold text-ink mb-1">Irene Nomikou-Lazarou</h3>
-        <p class="text-sm text-skydeep font-medium mb-4">Co-founder · Researcher</p>
-        <p class="text-sm text-ink/70 leading-relaxed">
+        <p class="text-lg text-skydeep font-medium mb-4">Co-founder · Researcher</p>
+        <p class="text-lg text-ink/70 leading-relaxed">
           PhD candidate and Fulbright Research Visiting Scholar. Research interests span climate
           physical risk, insurance and the systemic transmission of climate shocks.
         </p>
@@ -466,8 +466,8 @@ tailwind.config = {
       <div class="bg-ice rounded-2xl p-8 border border-ink/10">
         <div class="w-16 h-16 rounded-full bg-gradient-to-br from-skydeep to-violet text-white flex items-center justify-center font-display text-xl font-semibold mb-5">NT</div>
         <h3 class="font-display text-2xl font-semibold text-ink mb-1">Nikoletta Triantopoulou</h3>
-        <p class="text-sm text-skydeep font-medium mb-4">Co-founder · Researcher</p>
-        <p class="text-sm text-ink/70 leading-relaxed">
+        <p class="text-lg text-skydeep font-medium mb-4">Co-founder · Researcher</p>
+        <p class="text-lg text-ink/70 leading-relaxed">
           PhD candidate and Fulbright Research Visiting Scholar, contributing interdisciplinary
           research on climate risk and resilience.
         </p>
@@ -478,22 +478,22 @@ tailwind.config = {
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
       <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
         <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
-        <p class="text-sm font-medium text-ink/50">Member profile</p>
-        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+        <p class="text-lg font-medium text-ink/50">Member profile</p>
+        <p class="text-lg text-ink/35 mt-1">pending consent</p>
       </div>
       <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
         <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
-        <p class="text-sm font-medium text-ink/50">Member profile</p>
-        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+        <p class="text-lg font-medium text-ink/50">Member profile</p>
+        <p class="text-lg text-ink/35 mt-1">pending consent</p>
       </div>
       <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
         <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
-        <p class="text-sm font-medium text-ink/50">Member profile</p>
-        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+        <p class="text-lg font-medium text-ink/50">Member profile</p>
+        <p class="text-lg text-ink/35 mt-1">pending consent</p>
       </div>
       <a href="#contact" data-nav="contact" class="border border-violet/40 bg-violet/5 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-violet/10 transition">
         <span class="text-2xl text-violet mb-2">+</span>
-        <p class="text-sm font-medium text-violet">Join the network</p>
+        <p class="text-lg font-medium text-violet">Join the network</p>
       </a>
     </div>
   </div>
@@ -504,7 +504,7 @@ tailwind.config = {
   <div class="relative bg-gradient-to-br from-skydeep via-blue to-violet text-white overflow-hidden">
     <div class="absolute inset-0 grid-lines opacity-30"></div>
     <div class="relative max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-white/80 font-semibold mb-3">Events &amp; gallery</p>
+      <p class="text-lg tracking-[.22em] uppercase text-white/80 font-semibold mb-3">Events &amp; gallery</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold leading-tight">Where our network meets.</h1>
       <p class="text-lg text-white/80 leading-relaxed mt-5 max-w-3xl">
         Conferences, workshops and convenings that bring our members and partners together.
@@ -518,43 +518,43 @@ tailwind.config = {
         <div class="flex gap-6 border-b border-ink/10 pb-6">
           <div class="text-center shrink-0 w-20">
             <span class="block font-display text-3xl font-semibold text-skydeep">10</span>
-            <span class="block text-xs uppercase tracking-wide text-ink/50">Sep 2026</span>
+            <span class="block text-lg uppercase tracking-wide text-ink/50">Sep 2026</span>
           </div>
           <div>
             <h3 class="font-display text-lg font-semibold text-ink mb-1">CRWG First Meeting</h3>
-            <p class="text-sm text-ink/65 leading-relaxed">Founding gathering of the network: mission, research focus groups and the first collaborative working papers.</p>
+            <p class="text-lg text-ink/65 leading-relaxed">Founding gathering of the network: mission, research focus groups and the first collaborative working papers.</p>
           </div>
         </div>
         <div class="flex gap-6 border-b border-ink/10 pb-6">
           <div class="text-center shrink-0 w-20">
             <span class="block font-display text-3xl font-semibold text-skydeep">—</span>
-            <span class="block text-xs uppercase tracking-wide text-ink/50">2026</span>
+            <span class="block text-lg uppercase tracking-wide text-ink/50">2026</span>
           </div>
           <div>
             <h3 class="font-display text-lg font-semibold text-ink mb-1">Upcoming convening</h3>
-            <p class="text-sm text-ink/65 leading-relaxed">Next network meeting and research workshop — details to be announced.</p>
+            <p class="text-lg text-ink/65 leading-relaxed">Next network meeting and research workshop — details to be announced.</p>
           </div>
         </div>
         <div class="flex gap-6">
           <div class="text-center shrink-0 w-20">
             <span class="block font-display text-3xl font-semibold text-skydeep">—</span>
-            <span class="block text-xs uppercase tracking-wide text-ink/50">TBA</span>
+            <span class="block text-lg uppercase tracking-wide text-ink/50">TBA</span>
           </div>
           <div>
             <h3 class="font-display text-lg font-semibold text-ink mb-1">Conference participation</h3>
-            <p class="text-sm text-ink/65 leading-relaxed">We will share our research at international climate-risk and gender-equity forums.</p>
+            <p class="text-lg text-ink/65 leading-relaxed">We will share our research at international climate-risk and gender-equity forums.</p>
           </div>
         </div>
       </div>
 
       <div>
         <div class="grid grid-cols-2 gap-4">
-          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>10 Sep 2026<br>1st Meeting</div>
-          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
-          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
-          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-lg text-center p-4">Photo<br>10 Sep 2026<br>1st Meeting</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-lg text-center p-4">Photo<br>placeholder</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-lg text-center p-4">Photo<br>placeholder</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-lg text-center p-4">Photo<br>placeholder</div>
         </div>
-        <p class="text-xs text-ink/45 mt-4">Photos from our events and conferences will be published here.</p>
+        <p class="text-lg text-ink/45 mt-4">Photos from our events and conferences will be published here.</p>
       </div>
     </div>
   </div>
@@ -564,7 +564,7 @@ tailwind.config = {
 <section id="page-support" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Support us</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Support us</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Fund rigorous, inclusive climate research.</h1>
       <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
         We work with foundations, institutions, philanthropic donors and public programmes
@@ -578,27 +578,27 @@ tailwind.config = {
     <div class="grid lg:grid-cols-3 gap-6 mb-16">
       <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-skydeep">
         <h3 class="font-display text-xl font-semibold text-ink mb-3">Fund a working paper</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Support a specific research theme — from aquaculture to physical risk — and help bring a paper to publication.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Support a specific research theme — from aquaculture to physical risk — and help bring a paper to publication.</p>
       </div>
       <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-skydeep">
         <h3 class="font-display text-xl font-semibold text-ink mb-3">Support a focus group</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Enable a cohort of interdisciplinary researchers to convene, publish and translate findings into policy.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Enable a cohort of interdisciplinary researchers to convene, publish and translate findings into policy.</p>
       </div>
       <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-violet">
         <h3 class="font-display text-xl font-semibold text-ink mb-3">Partner institutionally</h3>
-        <p class="text-sm text-ink/65 leading-relaxed">Co-design joint research projects, conferences and training for early-career women researchers.</p>
+        <p class="text-lg text-ink/65 leading-relaxed">Co-design joint research projects, conferences and training for early-career women researchers.</p>
       </div>
     </div>
 
     <div class="border-t border-ink/10 pt-10">
-      <p class="text-xs tracking-[.2em] uppercase text-ink/45 font-semibold mb-6 text-center">Our funders &amp; partners</p>
+      <p class="text-lg tracking-[.2em] uppercase text-ink/45 font-semibold mb-6 text-center">Our funders &amp; partners</p>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
-        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
-        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
-        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-lg text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-lg text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-lg text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-lg text-ink/35">Partner logo</div>
       </div>
-      <p class="text-xs text-ink/40 mt-6 text-center italic">
+      <p class="text-lg text-ink/40 mt-6 text-center italic">
         We publish our funding sources in the interest of transparency and independence.
       </p>
     </div>
@@ -609,7 +609,7 @@ tailwind.config = {
 <section id="page-contact" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Contact</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Contact</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Let's work together.</h1>
     </div>
   </div>
@@ -621,7 +621,7 @@ tailwind.config = {
           Whether you are a researcher wishing to join the network, an institution seeking
           collaboration, or a funder interested in our work — we would like to hear from you.
         </p>
-        <div class="space-y-4 text-sm">
+        <div class="space-y-4 text-lg">
           <p class="flex items-center gap-3 text-ink/75">
             <span class="w-9 h-9 rounded-full bg-sky/30 text-skydeep flex items-center justify-center">✉</span>
             <a href="mailto:info@crwg.org" class="hover:text-skydeep transition">info@crwg.org</a>
@@ -635,16 +635,16 @@ tailwind.config = {
       <div>
         <form class="bg-ice rounded-2xl p-8 border border-ink/10 space-y-5" onsubmit="event.preventDefault(); this.querySelector('#formNote').classList.remove('hidden');">
           <div>
-            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Name</label>
-            <input type="text" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required>
+            <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Name</label>
+            <input type="text" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
           </div>
           <div>
-            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Email</label>
-            <input type="email" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required>
+            <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Email</label>
+            <input type="email" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
           </div>
           <div>
-            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">I am writing as</label>
-            <select class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep">
+            <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">I am writing as</label>
+            <select class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep">
               <option>Researcher / member</option>
               <option>Funder / donor</option>
               <option>Partner institution</option>
@@ -652,11 +652,11 @@ tailwind.config = {
             </select>
           </div>
           <div>
-            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Message</label>
-            <textarea rows="4" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required></textarea>
+            <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Message</label>
+            <textarea rows="4" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required></textarea>
           </div>
           <button type="submit" class="w-full bg-skydeep text-white py-3.5 rounded-full font-medium hover:bg-blue transition">Send message</button>
-          <p id="formNote" class="hidden text-xs text-skydeep text-center">Thank you — this is a demo form. Connect it to your inbox before publishing.</p>
+          <p id="formNote" class="hidden text-lg text-skydeep text-center">Thank you — this is a demo form. Connect it to your inbox before publishing.</p>
         </form>
       </div>
     </div>
@@ -667,7 +667,7 @@ tailwind.config = {
 <section id="page-legal" class="page">
   <div class="bg-mist border-b border-ink/10">
     <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
-      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Legal information</p>
+      <p class="text-lg tracking-[.22em] uppercase text-violet font-semibold mb-3">Legal information</p>
       <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Legal details &amp; registration.</h1>
       <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
         CLIMATE RISK WOMEN GLOBAL operates as a non-profit civil law company
@@ -679,40 +679,40 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
     <dl class="grid sm:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl">
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Registered name</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Registered name</dt>
         <dd class="text-ink font-medium">CLIMATE RISK WOMEN GLOBAL — Αστική Μη Κερδοσκοπική Εταιρεία</dd>
       </div>
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Legal form</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Legal form</dt>
         <dd class="text-ink font-medium">ΑΜΚΕ (non-profit civil law company), Greece</dd>
       </div>
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">GEMI registration no.</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">GEMI registration no.</dt>
         <dd class="text-ink font-medium">[ΓΕΜΗ — to be inserted]</dd>
       </div>
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">VAT / Tax no. (ΑΦΜ)</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">VAT / Tax no. (ΑΦΜ)</dt>
         <dd class="text-ink font-medium">[ΑΦΜ — to be inserted]</dd>
       </div>
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Registered seat</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Registered seat</dt>
         <dd class="text-ink font-medium">Ymittos, Athens, Greece</dd>
       </div>
       <div class="border-t border-ink/10 pt-5">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Established</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Established</dt>
         <dd class="text-ink font-medium">Network founded 2024 · ΑΜΚΕ constituted 2026</dd>
       </div>
       <div class="border-t border-ink/10 pt-5 sm:col-span-2">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Legal representatives</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Legal representatives</dt>
         <dd class="text-ink font-medium">Irene Nomikou-Lazarou and Nikoletta Triantopoulou, co-founders</dd>
       </div>
       <div class="border-t border-ink/10 pt-5 sm:col-span-2">
-        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Contact</dt>
+        <dt class="text-lg uppercase tracking-[.18em] text-ink/45 mb-1">Contact</dt>
         <dd class="text-ink font-medium"><a href="mailto:info@crwg.org" class="hover:text-skydeep transition">info@crwg.org</a></dd>
       </div>
     </dl>
 
-    <p class="text-sm text-ink/55 leading-relaxed mt-12 max-w-3xl">
+    <p class="text-lg text-ink/55 leading-relaxed mt-12 max-w-3xl">
       We publish our registration and funding information in the interest of transparency and
       independence. Donors and partner institutions requiring formal documentation,
       invoices or a signed agreement may contact us directly.
@@ -729,19 +729,19 @@ tailwind.config = {
       <div class="md:col-span-2">
         <img src="assets/logo.png" alt="Climate Risk Women Global"
              class="logo-img h-16 w-auto mb-5 bg-white/95 rounded-lg p-2">
-        <p class="text-sm leading-relaxed max-w-sm">
+        <p class="text-lg leading-relaxed max-w-sm">
           A global network of women and women-identified researchers and professionals
           working on climate risk and resilience.
         </p>
         <div class="flex gap-3 mt-6">
-          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">in</a>
-          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">X</a>
-          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">f</a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-lg">in</a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-lg">X</a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-lg">f</a>
         </div>
       </div>
       <div>
-        <h4 class="text-white text-sm font-semibold mb-4">Navigate</h4>
-        <ul class="space-y-2 text-sm">
+        <h4 class="text-white text-lg font-semibold mb-4">Navigate</h4>
+        <ul class="space-y-2 text-lg">
           <li><a href="#about" data-nav="about" class="hover:text-white transition">About</a></li>
           <li><a href="#research" data-nav="research" class="hover:text-white transition">Research</a></li>
           <li><a href="#network" data-nav="network" class="hover:text-white transition">Network</a></li>
@@ -749,8 +749,8 @@ tailwind.config = {
         </ul>
       </div>
       <div>
-        <h4 class="text-white text-sm font-semibold mb-4">Get in touch</h4>
-        <ul class="space-y-2 text-sm">
+        <h4 class="text-white text-lg font-semibold mb-4">Get in touch</h4>
+        <ul class="space-y-2 text-lg">
           <li><a href="mailto:info@crwg.org" class="hover:text-white transition">info@crwg.org</a></li>
           <li>Ymittos, Athens, Greece</li>
           <li><a href="#support" data-nav="support" class="hover:text-white transition">Support our work</a></li>
@@ -758,7 +758,7 @@ tailwind.config = {
       </div>
     </div>
 
-    <div class="pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-white/45">
+    <div class="pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-lg text-white/45">
       <p>© 2026 CLIMATE RISK WOMEN GLOBAL (CRWG). All rights reserved.</p>
       <div class="flex flex-wrap gap-x-5 gap-y-2">
         <a href="#" class="hover:text-white/80 transition">Terms of Use</a>
@@ -1090,5 +1090,5 @@ window.console = new Proxy(console, {
     return target[prop];
   }
 });
-</script></body>
+</script></>
 </html>
