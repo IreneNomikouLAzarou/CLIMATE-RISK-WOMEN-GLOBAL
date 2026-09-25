@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLIMATE RISK WOMEN GLOBAL (CRWG)</title>
+<meta name="description" content="CLIMATE RISK WOMEN GLOBAL (CRWG) is a global network of women and women-identified researchers and professionals working on climate risk and resilience.">
+<link rel="icon" href="assets/logo.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        // palette drawn directly from the logo
+        sky:     '#a9d6f2',   /* globe ocean */
+        skydeep: '#2bb3a8',   /* Tiffany — primary action colour */
+        blue:    '#1f9a90',   /* slightly deeper Tiffany for hover / active */
+        violet:  '#7a5cc4',   /* constellation dots */
+        teal:    '#2bb3a8',   /* Tiffany — light green-blue */
+        ice:     '#f2f8fd',   /* very light section bg */
+        mist:    '#e8f3fb',   /* light blue tint */
+        sand:    '#fbfdff',   /* near white */
+        ink:     '#1b2a3a',   /* soft navy text */
+        navy:    '#1b2a3a',   /* kept for headings */
+      },
+      fontFamily: {
+        display: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background:#fff; color:#1b2a3a; }
+  /* headings set straight and upright — no slant, no optical skew */
+  h1, h2, h3, h4 { font-style: normal; }
+  .font-display { font-family: 'Inter', system-ui, sans-serif; font-weight: 700; font-style: normal; letter-spacing: -0.02em; }
+
+  /* ---- page (tab) system ---- */
+  .page { display:none; }
+  .page.active { display:block; }
+
+  .nav-link { position:relative; }
+  .nav-link.active { color:#2bb3a8; }
+  .nav-link.active:after {
+    content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px;
+    background:linear-gradient(90deg,#2bb3a8,#7a5cc4); border-radius:2px;
+  }
+
+  /* inner tabs (research) */
+  .tab-btn.active { color:#2bb3a8; border-color:#2bb3a8; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+
+  .grid-lines{
+    background-image:
+      linear-gradient(rgba(169,214,242,.20) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(169,214,242,.20) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .mesh{
+    background-image: radial-gradient(rgba(122,92,196,.22) 1.4px, transparent 1.4px);
+    background-size: 34px 34px;
+  }
+  .logo-img { image-rendering: -webkit-optimize-contrast; }
+
+  /* ---- hero constellation ----
+     The canvas covers the whole hero as a soft background texture.
+     It sits *behind* the text (z-index) and is highly transparent,
+     so words stay crisp and readable while the network still feels
+     like the full hero is alive. */
+  #hero-net{
+    position:absolute; inset:0; width:100%; height:100%;
+    display:block; pointer-events:none; z-index:0; opacity:.6;
+  }
+  .hero-net-wrap{ position:absolute; inset:0; overflow:hidden; pointer-events:none; }
+  @media (prefers-reduced-motion: reduce){
+    .hero-net-wrap{ display:none; }
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ===== NAV ===== -->
+<header class="fixed top-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-b border-ink/10">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="#home" data-nav="home" class="flex items-center gap-3">
+      <img src="assets/logo-globe.png" alt="CRWG" class="logo-img h-11 w-11 object-contain">
+      <span class="leading-tight">
+        <span class="block font-display text-lg font-semibold text-ink tracking-tight">CRWG</span>
+        <span class="block text-[10px] tracking-[.18em] uppercase text-skydeep">Climate Risk Women Global</span>
+      </span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-ink/75">
+      <a href="#home"     data-nav="home"     class="nav-link hover:text-skydeep transition">Home</a>
+      <a href="#about"    data-nav="about"    class="nav-link hover:text-skydeep transition">About</a>
+      <a href="#research" data-nav="research" class="nav-link hover:text-skydeep transition">Research</a>
+      <a href="#network"  data-nav="network"  class="nav-link hover:text-skydeep transition">Network</a>
+      <a href="#events"   data-nav="events"   class="nav-link hover:text-skydeep transition">Events</a>
+      <a href="#support"  data-nav="support"  class="nav-link hover:text-skydeep transition">Support us</a>
+      <a href="#contact"  data-nav="contact"  class="nav-link hover:text-skydeep transition">Contact</a>
+    </nav>
+    <a href="#support" data-nav="support" class="hidden sm:inline-flex items-center gap-2 bg-skydeep text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-blue transition">
+      Partner with us
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <!-- mobile nav -->
+  <div class="lg:hidden border-t border-ink/10 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex gap-5 overflow-x-auto text-sm font-medium text-ink/70">
+      <a href="#home"     data-nav="home"     class="whitespace-nowrap">Home</a>
+      <a href="#about"    data-nav="about"    class="whitespace-nowrap">About</a>
+      <a href="#research" data-nav="research" class="whitespace-nowrap">Research</a>
+      <a href="#network"  data-nav="network"  class="whitespace-nowrap">Network</a>
+      <a href="#events"   data-nav="events"   class="whitespace-nowrap">Events</a>
+      <a href="#support"  data-nav="support"  class="whitespace-nowrap">Support</a>
+      <a href="#contact"  data-nav="contact"  class="whitespace-nowrap">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="pt-28 lg:pt-24">
+
+<!-- ======================= HOME ======================= -->
+<section id="page-home" class="page active">
+  <div class="relative pt-10 pb-20 md:pt-16 md:pb-24 bg-gradient-to-b from-mist via-sand to-white text-ink overflow-hidden">
+    <div class="absolute inset-0 mesh opacity-30"></div>
+    <div class="absolute -top-40 -right-32 w-[40rem] h-[40rem] rounded-full bg-sky/20 blur-3xl"></div>
+    <div class="absolute bottom-0 -left-40 w-[32rem] h-[32rem] rounded-full bg-violet/10 blur-3xl"></div>
+    <!-- full-hero network texture, sits behind the content -->
+    <div class="hero-net-wrap" aria-hidden="true"><canvas id="hero-net"></canvas></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-14 items-center">
+      <div class="lg:col-span-6">
+        <img src="assets/logo.png" alt="Climate Risk Women Global"
+             class="logo-img h-20 md:h-24 w-auto mb-8">
+        <span class="inline-flex items-center gap-2 text-xs tracking-[.22em] uppercase text-ink/50 mb-6">
+          <span class="w-8 h-px bg-violet"></span> Global research network · Est. 2024 / AMKE 2026
+        </span>
+        <h1 class="font-display text-4xl md:text-6xl leading-[1.05] font-semibold text-ink">
+          Women shaping the<br>
+          <span class="text-teal">frontline of climate risk</span><br>
+          and resilience.
+        </h1>
+        <p class="mt-7 text-lg text-ink/70 max-w-xl leading-relaxed">
+          CLIMATE RISK WOMEN GLOBAL (CRWG) is a global network of women and women-identified
+          researchers and professionals. We generate interdisciplinary, evidence-based research
+          and turn it into real-world climate action.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#research" data-nav="research" class="inline-flex items-center gap-2 bg-skydeep text-white px-6 py-3.5 rounded-full font-medium hover:bg-blue transition">
+            Explore our research
+          </a>
+          <a href="#support" data-nav="support" class="inline-flex items-center gap-2 border border-ink/20 text-ink px-6 py-3.5 rounded-full font-medium hover:bg-ink/5 transition">
+            Support our work
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <!-- the visual: stat card, floating over the full-hero network texture -->
+        <div class="bg-white/90 backdrop-blur-sm text-ink rounded-3xl p-8 shadow-2xl border border-ink/5">
+          <p class="text-xs tracking-[.2em] uppercase text-violet font-semibold mb-5">Why representation matters</p>
+          <div class="flex items-end gap-3 mb-2">
+            <span class="font-display text-6xl font-semibold text-teal">22.9%</span>
+            <span class="text-sm text-ink/60 mb-2 leading-tight">of research teams<br>at COP30 (2025)</span>
+          </div>
+          <p class="text-sm text-ink/70 leading-relaxed mb-6">
+            were majority female. At the same time, women remain underrepresented as
+            first and last authors in climate research (Danilenko et al., 2024).
+          </p>
+          <div class="border-t border-ink/10 pt-5 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <span class="block font-display text-2xl font-semibold text-teal">30%</span>
+              <span class="text-ink/60 text-xs">first authors</span>
+            </div>
+            <div>
+              <span class="block font-display text-2xl font-semibold text-teal">28.8%</span>
+              <span class="text-ink/60 text-xs">last authors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- quick entry cards -->
+  <div class="max-w-7xl mx-auto px-6 -mt-12 md:-mt-16 relative z-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <a href="#about" data-nav="about" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
+        <span class="block font-display text-sm text-skydeep font-semibold mb-3">01</span>
+        <h3 class="font-display text-lg font-semibold text-ink mb-2">Who we are</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">An interdisciplinary network of women researchers in climate risk.</p>
+      </a>
+      <a href="#research" data-nav="research" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
+        <span class="block font-display text-sm text-skydeep font-semibold mb-3">02</span>
+        <h3 class="font-display text-lg font-semibold text-ink mb-2">Our research</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Five working papers and twelve interdisciplinary focus groups.</p>
+      </a>
+      <a href="#network" data-nav="network" class="group bg-white rounded-2xl p-7 border border-ink/10 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
+        <span class="block font-display text-sm text-skydeep font-semibold mb-3">03</span>
+        <h3 class="font-display text-lg font-semibold text-ink mb-2">Our network</h3>
+        <p class="text-sm text-ink/60 leading-relaxed">Founders and members across disciplines and geographies.</p>
+      </a>
+      <a href="#support" data-nav="support" class="group bg-gradient-to-br from-skydeep to-violet text-white rounded-2xl p-7 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition">
+        <span class="block font-display text-sm text-white/80 font-semibold mb-3">04</span>
+        <h3 class="font-display text-lg font-semibold mb-2">Fund our work</h3>
+        <p class="text-sm text-white/80 leading-relaxed">Support rigorous, inclusive climate research and the women who produce it.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- mission strip -->
+  <div class="max-w-7xl mx-auto px-6 py-20 md:py-24">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5">
+        <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-4">Our mission</p>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold text-ink leading-tight">
+          Representation is not symbolic. It is a precondition for research that works.
+        </h2>
+      </div>
+      <div class="lg:col-span-7 space-y-5 text-lg text-ink/70 leading-relaxed">
+        <p>
+          We empower women and women-identified professionals through mentorship, foster research
+          collaboration across disciplines, and create a space where diverse ideas — and the people
+          behind them — can thrive.
+        </p>
+        <p>
+          Our work connects climate science, finance, insurance, urban systems, cultural heritage,
+          aquaculture, AI, public health, neuroscience and the humanities, translating evidence
+          into policy influence and on-the-ground action.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ABOUT ======================= -->
+<section id="page-about" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Who we are</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">
+        An interdisciplinary network with a single purpose.
+      </h1>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-12 gap-16">
+      <div class="lg:col-span-4">
+        <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-4">Our story</p>
+        <h2 class="font-display text-2xl md:text-3xl font-semibold text-ink leading-tight">
+          2024 to 2026: from an informal collaboration to an institution.
+        </h2>
+      </div>
+      <div class="lg:col-span-8 space-y-6 text-lg text-ink/75 leading-relaxed">
+        <p>
+          CRWG began in 2024 as an informal collaboration of women researchers and professionals
+          working on climate risk and resilience. In 2026 it was formally established as a
+          non-profit organization (AMKE), to institutionalize and scale its mission.
+        </p>
+        <p>
+          Our approach is deliberately interdisciplinary. We bring together expertise that rarely
+          sits at the same table — climate science, finance, insurance, urban systems, cultural
+          heritage, aquaculture, AI, public health, neuroscience and the humanities — to address
+          how climate risk is experienced, measured and mitigated in the real world.
+        </p>
+        <div class="pt-4 border-t border-ink/10">
+          <p class="text-base text-ink/60 italic">
+            “We believe that representation is not a symbolic goal but a precondition for
+            research that actually works — and that diverse teams produce more robust,
+            more equitable climate solutions.”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20 grid md:grid-cols-4 gap-6">
+      <div class="border-t-2 border-skydeep pt-6">
+        <span class="font-display text-sm text-skydeep font-semibold">01</span>
+        <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Deep expertise</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Specialists across climate, finance, health, engineering and social science.</p>
+      </div>
+      <div class="border-t-2 border-skydeep pt-6">
+        <span class="font-display text-sm text-skydeep font-semibold">02</span>
+        <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Shared frameworks</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Common methods and metrics that allow insights to travel across disciplines.</p>
+      </div>
+      <div class="border-t-2 border-violet pt-6">
+        <span class="font-display text-sm text-violet font-semibold">03</span>
+        <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Collaborative projects</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Joint working papers, proposals and project submissions with our partners.</p>
+      </div>
+      <div class="border-t-2 border-violet pt-6">
+        <span class="font-display text-sm text-violet font-semibold">04</span>
+        <h3 class="font-display text-xl font-semibold text-ink mt-2 mb-2">Real-world impact</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Evidence translated into policy influence and on-the-ground action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= RESEARCH ======================= -->
+<section id="page-research" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Research &amp; working papers</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">
+        Evidence generation as our core activity.
+      </h1>
+      <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
+        Our research is organized in focus groups and published as working papers, with the aim
+        of informing policy and practice.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="flex flex-wrap gap-2 border-b border-ink/15 mb-10" id="research-tabs">
+      <button class="tab-btn active px-5 py-3 text-sm font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="papers">Working papers</button>
+      <button class="tab-btn px-5 py-3 text-sm font-medium text-ink/50 border-b-2 border-transparent transition" data-tab="groups">Focus groups</button>
+    </div>
+
+    <div id="tab-papers" class="tab-panel active">
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-2xl p-7 border border-ink/10 hover:shadow-lg transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[11px] tracking-wide uppercase font-semibold text-violet">2026</span>
+            <span class="w-1 h-1 rounded-full bg-skydeep"></span>
+            <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Climate-linked AI and neuro-health outcomes</h3>
+          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+            Exploring how AI-enabled climate analytics can support understanding of
+            neurological and public-health impacts of climate stressors.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">AI &amp; Data Science</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Neuroscience</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 border border-ink/10 hover:shadow-lg transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[11px] tracking-wide uppercase font-semibold text-violet">2025</span>
+            <span class="w-1 h-1 rounded-full bg-skydeep"></span>
+            <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Agricultural insurance under climate stress — evidence from India</h3>
+          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+            Assessing the role of insurance instruments in protecting smallholder farmers
+            against climate-driven income shocks.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Insurance</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Economics</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 border border-ink/10 hover:shadow-lg transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[11px] tracking-wide uppercase font-semibold text-violet">2025</span>
+            <span class="w-1 h-1 rounded-full bg-skydeep"></span>
+            <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Physical risk, tipping points and systemic financial exposure</h3>
+          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+            Linking climate tipping points to physical risk transmission across financial
+            and real-estate systems.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Physical Risk</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Finance</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Real Estate</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 border border-ink/10 hover:shadow-lg transition">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[11px] tracking-wide uppercase font-semibold text-violet">2024</span>
+            <span class="w-1 h-1 rounded-full bg-skydeep"></span>
+            <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Aquaculture and fisheries in a changing climate</h3>
+          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+            Climate risk, adaptation capacity and resilience pathways for aquaculture and
+            coastal fishing communities.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Aquaculture</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Fisheries</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 border border-ink/10 hover:shadow-lg transition md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-[11px] tracking-wide uppercase font-semibold text-violet">2024</span>
+            <span class="w-1 h-1 rounded-full bg-skydeep"></span>
+            <span class="text-[11px] uppercase tracking-wide text-ink/50">Working paper</span>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink leading-snug mb-3">Insurance, risk transfer and climate resilience</h3>
+          <p class="text-sm text-ink/65 leading-relaxed mb-4">
+            How insurance and risk-transfer mechanisms can be redesigned to serve
+            climate-vulnerable populations.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Insurance</span>
+            <span class="text-[11px] bg-sky/25 text-skydeep px-3 py-1 rounded-full">Risk Transfer</span>
+          </div>
+        </article>
+      </div>
+      <p class="text-xs text-ink/45 mt-8 italic">
+        Working papers are authored by CRWG founders and network members. Full texts available upon request.
+      </p>
+    </div>
+
+    <div id="tab-groups" class="tab-panel">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Aquaculture &amp; Fisheries</h4><p class="text-sm text-ink/60">Climate resilience in marine and coastal systems.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Urban Systems</h4><p class="text-sm text-ink/60">Heat, flooding and adaptation in cities.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Economics, Real Estate &amp; Finance</h4><p class="text-sm text-ink/60">Valuation, exposure and financial stability.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Physical Risk &amp; Systemic Change</h4><p class="text-sm text-ink/60">Tipping points and cascading risk.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Cultural Heritage</h4><p class="text-sm text-ink/60">Protecting heritage under climate threat.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">AI &amp; Data Science</h4><p class="text-sm text-ink/60">Modelling, prediction and climate analytics.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Public Health &amp; Pharmacology</h4><p class="text-sm text-ink/60">Health impacts and pharmaceutical response.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Biology &amp; Neuroscience</h4><p class="text-sm text-ink/60">Physiological and cognitive climate effects.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Complexity Science &amp; Econophysics</h4><p class="text-sm text-ink/60">Systemic modelling of coupled systems.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Critical Infrastructure &amp; Energy</h4><p class="text-sm text-ink/60">Grids, energy and resilience planning.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Psychology &amp; Communication</h4><p class="text-sm text-ink/60">Behaviour, risk perception and narrative.</p></div>
+        <div class="bg-white rounded-xl p-5 border border-ink/10"><h4 class="font-display font-semibold text-ink mb-1">Climate Science &amp; Geography</h4><p class="text-sm text-ink/60">Physical processes and spatial risk.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= NETWORK ======================= -->
+<section id="page-network" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Our network</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Founders &amp; members.</h1>
+      <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
+        CRWG is built on the expertise of its founders and an expanding network of researchers
+        and professionals across disciplines and geographies.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid md:grid-cols-2 gap-8 mb-16">
+      <div class="bg-ice rounded-2xl p-8 border border-ink/10">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-skydeep to-violet text-white flex items-center justify-center font-display text-xl font-semibold mb-5">IN</div>
+        <h3 class="font-display text-2xl font-semibold text-ink mb-1">Irene Nomikou-Lazarou</h3>
+        <p class="text-sm text-skydeep font-medium mb-4">Co-founder · Researcher</p>
+        <p class="text-sm text-ink/70 leading-relaxed">
+          PhD candidate and Fulbright Research Visiting Scholar. Research interests span climate
+          physical risk, insurance and the systemic transmission of climate shocks.
+        </p>
+      </div>
+      <div class="bg-ice rounded-2xl p-8 border border-ink/10">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-skydeep to-violet text-white flex items-center justify-center font-display text-xl font-semibold mb-5">NT</div>
+        <h3 class="font-display text-2xl font-semibold text-ink mb-1">Nikoletta Triantopoulou</h3>
+        <p class="text-sm text-skydeep font-medium mb-4">Co-founder · Researcher</p>
+        <p class="text-sm text-ink/70 leading-relaxed">
+          PhD candidate and Fulbright Research Visiting Scholar, contributing interdisciplinary
+          research on climate risk and resilience.
+        </p>
+      </div>
+    </div>
+
+    <h3 class="font-display text-xl font-semibold text-ink mb-6">Network members</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
+        <p class="text-sm font-medium text-ink/50">Member profile</p>
+        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+      </div>
+      <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
+        <p class="text-sm font-medium text-ink/50">Member profile</p>
+        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+      </div>
+      <div class="border border-dashed border-ink/25 rounded-xl p-6 text-center">
+        <div class="w-12 h-12 mx-auto rounded-full bg-ink/5 mb-3"></div>
+        <p class="text-sm font-medium text-ink/50">Member profile</p>
+        <p class="text-xs text-ink/35 mt-1">pending consent</p>
+      </div>
+      <a href="#contact" data-nav="contact" class="border border-violet/40 bg-violet/5 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:bg-violet/10 transition">
+        <span class="text-2xl text-violet mb-2">+</span>
+        <p class="text-sm font-medium text-violet">Join the network</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= EVENTS ======================= -->
+<section id="page-events" class="page">
+  <div class="relative bg-gradient-to-br from-skydeep via-blue to-violet text-white overflow-hidden">
+    <div class="absolute inset-0 grid-lines opacity-30"></div>
+    <div class="relative max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-white/80 font-semibold mb-3">Events &amp; gallery</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold leading-tight">Where our network meets.</h1>
+      <p class="text-lg text-white/80 leading-relaxed mt-5 max-w-3xl">
+        Conferences, workshops and convenings that bring our members and partners together.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div class="space-y-6">
+        <div class="flex gap-6 border-b border-ink/10 pb-6">
+          <div class="text-center shrink-0 w-20">
+            <span class="block font-display text-3xl font-semibold text-skydeep">10</span>
+            <span class="block text-xs uppercase tracking-wide text-ink/50">Sep 2026</span>
+          </div>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-ink mb-1">CRWG First Meeting</h3>
+            <p class="text-sm text-ink/65 leading-relaxed">Founding gathering of the network: mission, research focus groups and the first collaborative working papers.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 border-b border-ink/10 pb-6">
+          <div class="text-center shrink-0 w-20">
+            <span class="block font-display text-3xl font-semibold text-skydeep">—</span>
+            <span class="block text-xs uppercase tracking-wide text-ink/50">2026</span>
+          </div>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-ink mb-1">Upcoming convening</h3>
+            <p class="text-sm text-ink/65 leading-relaxed">Next network meeting and research workshop — details to be announced.</p>
+          </div>
+        </div>
+        <div class="flex gap-6">
+          <div class="text-center shrink-0 w-20">
+            <span class="block font-display text-3xl font-semibold text-skydeep">—</span>
+            <span class="block text-xs uppercase tracking-wide text-ink/50">TBA</span>
+          </div>
+          <div>
+            <h3 class="font-display text-lg font-semibold text-ink mb-1">Conference participation</h3>
+            <p class="text-sm text-ink/65 leading-relaxed">We will share our research at international climate-risk and gender-equity forums.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>10 Sep 2026<br>1st Meeting</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
+          <div class="aspect-square rounded-2xl bg-mist border border-ink/10 flex items-center justify-center text-ink/35 text-sm text-center p-4">Photo<br>placeholder</div>
+        </div>
+        <p class="text-xs text-ink/45 mt-4">Photos from our events and conferences will be published here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= SUPPORT ======================= -->
+<section id="page-support" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Support us</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Fund rigorous, inclusive climate research.</h1>
+      <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
+        We work with foundations, institutions, philanthropic donors and public programmes
+        that share our commitment to evidence-based climate resilience — and to the women
+        who produce it.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-3 gap-6 mb-16">
+      <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-skydeep">
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Fund a working paper</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Support a specific research theme — from aquaculture to physical risk — and help bring a paper to publication.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-skydeep">
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Support a focus group</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Enable a cohort of interdisciplinary researchers to convene, publish and translate findings into policy.</p>
+      </div>
+      <div class="bg-white rounded-2xl p-8 border border-ink/10 border-t-2 border-t-violet">
+        <h3 class="font-display text-xl font-semibold text-ink mb-3">Partner institutionally</h3>
+        <p class="text-sm text-ink/65 leading-relaxed">Co-design joint research projects, conferences and training for early-career women researchers.</p>
+      </div>
+    </div>
+
+    <div class="border-t border-ink/10 pt-10">
+      <p class="text-xs tracking-[.2em] uppercase text-ink/45 font-semibold mb-6 text-center">Our funders &amp; partners</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
+        <div class="rounded-xl border border-dashed border-ink/20 py-8 text-center text-sm text-ink/35">Partner logo</div>
+      </div>
+      <p class="text-xs text-ink/40 mt-6 text-center italic">
+        We publish our funding sources in the interest of transparency and independence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CONTACT ======================= -->
+<section id="page-contact" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Contact</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Let's work together.</h1>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid lg:grid-cols-2 gap-16">
+      <div>
+        <p class="text-lg text-ink/70 leading-relaxed mb-8">
+          Whether you are a researcher wishing to join the network, an institution seeking
+          collaboration, or a funder interested in our work — we would like to hear from you.
+        </p>
+        <div class="space-y-4 text-sm">
+          <p class="flex items-center gap-3 text-ink/75">
+            <span class="w-9 h-9 rounded-full bg-sky/30 text-skydeep flex items-center justify-center">✉</span>
+            <a href="mailto:info@crwg.org" class="hover:text-skydeep transition">info@crwg.org</a>
+          </p>
+          <p class="flex items-center gap-3 text-ink/75">
+            <span class="w-9 h-9 rounded-full bg-sky/30 text-skydeep flex items-center justify-center">⌂</span>
+            Ymittos, Athens, Greece
+          </p>
+        </div>
+      </div>
+      <div>
+        <form class="bg-ice rounded-2xl p-8 border border-ink/10 space-y-5" onsubmit="event.preventDefault(); this.querySelector('#formNote').classList.remove('hidden');">
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Name</label>
+            <input type="text" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Email</label>
+            <input type="email" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">I am writing as</label>
+            <select class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep">
+              <option>Researcher / member</option>
+              <option>Funder / donor</option>
+              <option>Partner institution</option>
+              <option>Media / other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-ink/50 mb-2">Message</label>
+            <textarea rows="4" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-sm focus:outline-none focus:border-skydeep" required></textarea>
+          </div>
+          <button type="submit" class="w-full bg-skydeep text-white py-3.5 rounded-full font-medium hover:bg-blue transition">Send message</button>
+          <p id="formNote" class="hidden text-xs text-skydeep text-center">Thank you — this is a demo form. Connect it to your inbox before publishing.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= LEGAL ======================= -->
+<section id="page-legal" class="page">
+  <div class="bg-mist border-b border-ink/10">
+    <div class="max-w-7xl mx-auto px-6 py-14 md:py-16">
+      <p class="text-xs tracking-[.22em] uppercase text-violet font-semibold mb-3">Legal information</p>
+      <h1 class="font-display text-4xl md:text-5xl font-semibold text-ink leading-tight">Legal details &amp; registration.</h1>
+      <p class="text-lg text-ink/70 leading-relaxed mt-5 max-w-3xl">
+        CLIMATE RISK WOMEN GLOBAL operates as a non-profit civil law company
+        (Αστική Μη Κερδοσκοπική Εταιρεία — ΑΜΚΕ) under Greek law.
+      </p>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 py-16 md:py-20">
+    <dl class="grid sm:grid-cols-2 gap-x-12 gap-y-8 max-w-4xl">
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Registered name</dt>
+        <dd class="text-ink font-medium">CLIMATE RISK WOMEN GLOBAL — Αστική Μη Κερδοσκοπική Εταιρεία</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Legal form</dt>
+        <dd class="text-ink font-medium">ΑΜΚΕ (non-profit civil law company), Greece</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">GEMI registration no.</dt>
+        <dd class="text-ink font-medium">[ΓΕΜΗ — to be inserted]</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">VAT / Tax no. (ΑΦΜ)</dt>
+        <dd class="text-ink font-medium">[ΑΦΜ — to be inserted]</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Registered seat</dt>
+        <dd class="text-ink font-medium">Ymittos, Athens, Greece</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Established</dt>
+        <dd class="text-ink font-medium">Network founded 2024 · ΑΜΚΕ constituted 2026</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5 sm:col-span-2">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Legal representatives</dt>
+        <dd class="text-ink font-medium">Irene Nomikou-Lazarou and Nikoletta Triantopoulou, co-founders</dd>
+      </div>
+      <div class="border-t border-ink/10 pt-5 sm:col-span-2">
+        <dt class="text-xs uppercase tracking-[.18em] text-ink/45 mb-1">Contact</dt>
+        <dd class="text-ink font-medium"><a href="mailto:info@crwg.org" class="hover:text-skydeep transition">info@crwg.org</a></dd>
+      </div>
+    </dl>
+
+    <p class="text-sm text-ink/55 leading-relaxed mt-12 max-w-3xl">
+      We publish our registration and funding information in the interest of transparency and
+      independence. Donors and partner institutions requiring formal documentation,
+      invoices or a signed agreement may contact us directly.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-ink text-white/70 pt-16 pb-10">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+      <div class="md:col-span-2">
+        <img src="assets/logo.png" alt="Climate Risk Women Global"
+             class="logo-img h-16 w-auto mb-5 bg-white/95 rounded-lg p-2">
+        <p class="text-sm leading-relaxed max-w-sm">
+          A global network of women and women-identified researchers and professionals
+          working on climate risk and resilience.
+        </p>
+        <div class="flex gap-3 mt-6">
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">in</a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">X</a>
+          <a href="#" class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition text-xs">f</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold mb-4">Navigate</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#about" data-nav="about" class="hover:text-white transition">About</a></li>
+          <li><a href="#research" data-nav="research" class="hover:text-white transition">Research</a></li>
+          <li><a href="#network" data-nav="network" class="hover:text-white transition">Network</a></li>
+          <li><a href="#events" data-nav="events" class="hover:text-white transition">Events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white text-sm font-semibold mb-4">Get in touch</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:info@crwg.org" class="hover:text-white transition">info@crwg.org</a></li>
+          <li>Ymittos, Athens, Greece</li>
+          <li><a href="#support" data-nav="support" class="hover:text-white transition">Support our work</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col md:flex-row md:items-center justify-between gap-4 text-xs text-white/45">
+      <p>© 2026 CLIMATE RISK WOMEN GLOBAL (CRWG). All rights reserved.</p>
+      <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href="#" class="hover:text-white/80 transition">Terms of Use</a>
+        <a href="#" class="hover:text-white/80 transition">Privacy Policy</a>
+        <a href="#legal" data-nav="legal" class="hover:text-white/80 transition">Legal</a>
+        <a href="#contact" data-nav="contact" class="hover:text-white/80 transition">Contact</a>
+      </div>
+    </div>
+    <p class="mt-4 text-[11px] text-white/30">
+      CLIMATE RISK WOMEN GLOBAL — Αστική Μη Κερδοσκοπική Εταιρεία (ΑΜΚΕ) · Ymittos, Athens, Greece
+    </p>
+  </div>
+</footer>
+
+<script>
+  /* ============================================================
+     HERO CONSTELLATION
+     Nodes = disciplines in the network. They drift very slowly.
+     Every few seconds, one connection between two nodes draws
+     itself and fades - a new collaboration forming. Nothing
+     bounces, nothing flickers. Respects prefers-reduced-motion.
+     ============================================================ */
+  (function () {
+    const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    const canvas = document.getElementById('hero-net');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const hero = canvas.parentElement; // the .hero-net-wrap spanning the whole hero
+
+    // labels = the disciplines we actually work across
+    const LABELS = [
+      'Aquaculture', 'Insurance', 'Urban systems', 'Public health',
+      'AI & data', 'Cultural heritage', 'Physical risk', 'Finance',
+      'Energy', 'Neuroscience', 'Complexity', 'Climate science',
+      'Economics', 'Engineering', 'Humanities', 'Policy'
+    ];
+
+    // palette straight from the logo
+    const VIOLET = '122, 92, 196';
+    const BLUE   = '63, 143, 204';
+    const TEAL   = '43, 179, 168';
+
+    let W = 0, H = 0, DPR = 1;
+    let nodes = [];
+    let link = null;      // { a, b, born } - the one active connection
+    let nextLinkAt = 0;   // when to spawn the next one
+    let raf = null;
+    let t0 = performance.now();
+
+    function resize() {
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      const r = hero.getBoundingClientRect();
+      W = r.width; H = r.height;
+      canvas.width = Math.floor(W * DPR);
+      canvas.height = Math.floor(H * DPR);
+      canvas.style.width = W + 'px';
+      canvas.style.height = H + 'px';
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      build();
+    }
+
+    function build() {
+      // The canvas covers the whole hero again. The field spreads evenly
+      // across it, with a small random jitter so it never looks mechanical.
+      const xMin = W * 0.05;
+      const xMax = W * 0.95;
+      const yMin = H * 0.10;
+      const yMax = H * 0.90;
+
+      // A loose grid keeps the field evenly spread and easy to read,
+      // with a small random jitter so it never looks mechanical.
+      const cols = 6, rows = 4;
+      const cw = (xMax - xMin) / cols;
+      const ch = (yMax - yMin) / rows;
+
+      nodes = LABELS.map(function (label, i) {
+        const col = i % cols;
+        const row = Math.floor(i / cols);
+        const jx = (Math.random() - 0.5) * cw * 0.42;
+        const jy = (Math.random() - 0.5) * ch * 0.42;
+        return {
+          label: label,
+          x: Math.min(xMax, Math.max(xMin, xMin + cw * (col + 0.5) + jx)),
+          y: Math.min(yMax, Math.max(yMin, yMin + ch * (row + 0.5) + jy)),
+          // tiny drift: ~4-9 px per SECOND, not per frame
+          vx: (Math.random() - 0.5) * 0.007,
+          vy: (Math.random() - 0.5) * 0.007,
+          r: 2.6 + Math.random() * 1.1,
+          hue: i % 3 // 0 violet, 1 blue, 2 teal
+        };
+      });
+      link = null;
+      nextLinkAt = 900;
+    }
+
+    function rgb(i) { return i === 0 ? VIOLET : (i === 1 ? BLUE : TEAL); }
+
+    // colour a lattice edge by the node family it belongs to
+    function violetOrBlue(hue) {
+      if (hue === 0) return VIOLET;
+      if (hue === 2) return TEAL;
+      return BLUE;
+    }
+
+    // Everything is drawn at a low alpha so the network stays a quiet
+    // background texture and never competes with the headline.
+    const A_LATTICE = 0.14;   // lattice links (now a full connected mesh)
+    const A_RING    = 0.16;   // node outer ring
+    const A_CORE    = 0.42;   // node solid core
+    const A_LINK    = 0.45;   // the featured connection
+    const A_HALO    = 0.10;   // halo around linked endpoints
+
+    function draw(now) {
+      const dt = Math.min(now - t0, 48); // clamp big tab-switch gaps
+      t0 = now;
+      ctx.clearRect(0, 0, W, H);
+
+      // ---- advance positions ----
+      for (const n of nodes) {
+        n.x += n.vx * dt;
+        n.y += n.vy * dt;
+        if (n.x < W * 0.06 || n.x > W * 0.94) n.vx *= -1;
+        if (n.y < H * 0.12 || n.y > H * 0.88) n.vy *= -1;
+        n.x = Math.max(W * 0.06, Math.min(W * 0.94, n.x));
+        n.y = Math.max(H * 0.12, Math.min(H * 0.88, n.y));
+      }
+
+      // ---- one active connection at a time ----
+      if (!link && now >= nextLinkAt) {
+        // pick two reasonably close nodes so the line feels local, not random
+        let best = null, bestScore = Infinity;
+        const IDEAL = Math.min(W, H) * 0.75;
+        for (let i = 0; i < 18; i++) {
+          const a = nodes[(Math.random() * nodes.length) | 0];
+          const b = nodes[(Math.random() * nodes.length) | 0];
+          if (a === b) continue;
+          const d = Math.hypot(a.x - b.x, a.y - b.y);
+          const score = Math.abs(d - IDEAL);
+          if (score < bestScore) { bestScore = score; best = { a: a, b: b }; }
+        }
+        if (best) link = { a: best.a, b: best.b, born: now };
+      }
+
+      // ---- full connected network: every node links to its 3 closest neighbours ----
+      // A permanent mesh: each node is joined to its nearest neighbours on every frame,
+      // so the whole field reads as one connected structure rather than loose dotted pairs.
+      const MAX_EDGE = Math.min(W, H) * 0.62;  // don't draw lines across the whole hero
+      const NEIGHBOURS = 3;                    // how many links each node keeps
+      for (let i = 0; i < nodes.length; i++) {
+        // rank all other nodes by distance
+        const others = [];
+        for (let j = 0; j < nodes.length; j++) {
+          if (i === j) continue;
+          others.push({ j: j, d: Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y) });
+        }
+        others.sort(function (p, q) { return p.d - q.d; });
+
+        for (let k = 0; k < Math.min(NEIGHBOURS, others.length); k++) {
+          const o = others[k];
+          if (o.d > MAX_EDGE) continue;
+          // fade each link with distance so nearer pairs read stronger
+          const a = A_LATTICE * (1 - o.d / MAX_EDGE) + A_LATTICE * 0.5;
+          // a link between two violet/teal nodes picks up a touch more colour
+          const lineCol = (nodes[i].hue === nodes[o.j].hue) ? violetOrBlue(nodes[i].hue) : BLUE;
+          ctx.strokeStyle = 'rgba(' + lineCol + ', ' + a.toFixed(3) + ')';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[o.j].x, nodes[o.j].y);
+          ctx.stroke();
+        }
+      }
+
+      // ---- the featured connection: draw -> hold -> fade ----
+      if (link) {
+        const age = now - link.born;
+        const DRAW = 900, HOLD = 4200, FADE = 1200;
+        let p = 0, alpha = 0;
+        if (age < DRAW) { p = age / DRAW; alpha = p; }
+        else if (age < DRAW + HOLD) { p = 1; alpha = 1; }
+        else if (age < DRAW + HOLD + FADE) { p = 1; alpha = 1 - (age - DRAW - HOLD) / FADE; }
+        else { link = null; nextLinkAt = now + 900 + Math.random() * 1600; }
+
+        if (link) {
+          const A = link.a, B = link.b;
+          const ex = A.x + (B.x - A.x) * p;
+          const ey = A.y + (B.y - A.y) * p;
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = 'rgba(' + VIOLET + ',' + (A_LINK * alpha).toFixed(3) + ')';
+          ctx.beginPath(); ctx.moveTo(A.x, A.y); ctx.lineTo(ex, ey); ctx.stroke();
+
+          // a small pulse travelling along the forming link
+          if (p > 0.15) {
+            const tp = (age / 1400) % 1;
+            const px = A.x + (ex - A.x) * tp;
+            const py = A.y + (ey - A.y) * tp;
+            ctx.fillStyle = 'rgba(' + TEAL + ',' + (0.55 * alpha).toFixed(3) + ')';
+            ctx.beginPath(); ctx.arc(px, py, 3, 0, Math.PI * 2); ctx.fill();
+          }
+
+          // highlight both endpoints with a halo
+          for (const E of [A, B]) {
+            ctx.fillStyle = 'rgba(' + VIOLET + ',' + (A_HALO * alpha).toFixed(3) + ')';
+            ctx.beginPath(); ctx.arc(E.x, E.y, 11, 0, Math.PI * 2); ctx.fill();
+            ctx.fillStyle = 'rgba(' + VIOLET + ',' + (0.5 * alpha).toFixed(3) + ')';
+            ctx.beginPath(); ctx.arc(E.x, E.y, 4.2, 0, Math.PI * 2); ctx.fill();
+          }
+        }
+      }
+
+      // ---- nodes only (no labels: keeps the field clean and avoids overlap) ----
+      for (const n of nodes) {
+        const c = rgb(n.hue);
+
+        // soft outer ring so each node reads as a defined point
+        ctx.strokeStyle = 'rgba(' + c + ', ' + A_RING + ')';
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r + 4, 0, Math.PI * 2); ctx.stroke();
+
+        // solid core
+        ctx.fillStyle = 'rgba(' + c + ', ' + A_CORE + ')';
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+      }
+
+      raf = requestAnimationFrame(draw);
+    }
+
+    // start / stop around visibility and resize
+    let ro = null;
+    if ('ResizeObserver' in window) { ro = new ResizeObserver(function () { resize(); }); ro.observe(hero); }
+    else { window.addEventListener('resize', resize); }
+    // note: the canvas panel becomes visible only on lg screens; re-measure when shown
+    window.addEventListener('resize', resize);
+    resize();
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { if (raf) cancelAnimationFrame(raf), raf = null; }
+      else if (!raf) { t0 = performance.now(); raf = requestAnimationFrame(draw); }
+    });
+
+    raf = requestAnimationFrame(draw);
+  })();
+  (function () {
+    const PAGES = ['home','about','research','network','events','support','contact','legal'];
+
+    function showPage(name) {
+      if (PAGES.indexOf(name) === -1) name = 'home';
+
+      // hide all pages, show the requested one
+      document.querySelectorAll('.page').forEach(function (p) {
+        p.classList.remove('active');
+      });
+      const el = document.getElementById('page-' + name);
+      if (el) el.classList.add('active');
+
+      // highlight the active nav item(s)
+      document.querySelectorAll('[data-nav]').forEach(function (a) {
+        a.classList.remove('active');
+      });
+      document.querySelectorAll('[data-nav="' + name + '"]').forEach(function (a) {
+        a.classList.add('active');
+      });
+
+      document.title = (name === 'home')
+        ? 'CLIMATE RISK WOMEN GLOBAL (CRWG)'
+        : name.charAt(0).toUpperCase() + name.slice(1) + ' · CRWG';
+
+      // reset inner research tabs each time Research opens
+      if (name === 'research') {
+        document.querySelectorAll('.tab-btn').forEach(function (b) {
+          b.classList.toggle('active', b.dataset.tab === 'papers');
+        });
+        document.querySelectorAll('.tab-panel').forEach(function (p) {
+          p.classList.toggle('active', p.id === 'tab-papers');
+        });
+      }
+
+      try { window.scrollTo(0, 0); } catch (e) {}
+    }
+
+    // click handlers on every nav link
+    document.querySelectorAll('[data-nav]').forEach(function (link) {
+      link.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        showPage(link.dataset.nav);
+      });
+    });
+
+    // inner research tabs
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const target = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        const panel = document.getElementById('tab-' + target);
+        if (panel) panel.classList.add('active');
+      });
+    });
+
+    // open the right tab from the URL hash if present, otherwise Home
+    const start = (location.hash || '#home').replace('#', '').toLowerCase();
+    showPage(start);
+  })();
+</script>
+<script>window.parent.postMessage({ action: "ready" }, "*"); 
+ 
+window.console = new Proxy(console, {
+  get(target, prop) {
+    if (['log', 'warn', 'error'].includes(prop)) {
+      return new Proxy(target[prop], {
+        apply(fn, thisArg, args) {
+          fn.apply(thisArg, args);
+          window.parent.postMessage({ action: 'console', 
+            type: prop, 
+            args: args.map((arg) => {
+              try {
+                return JSON.stringify(arg).replace(/^["']|["']$/g, '');
+              } catch (e) {
+                return arg;
+              }
+            }) 
+          }, '*');
+        }
+      });
+    }
+    return target[prop];
+  }
+});
+</script></body>
+</html>
