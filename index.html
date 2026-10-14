@@ -866,18 +866,18 @@ systematically underrepresented in current research.</span>
         </div>
       </div>
       <div>
-        <form class="bg-ice rounded-2xl p-8 border border-ink/10 space-y-5" onsubmit="event.preventDefault(); this.querySelector('#formNote').classList.remove('hidden');">
+        <form action="https://formspree.io/f/mvkzwygo" method="POST" class="bg-ice rounded-2xl p-8 border border-ink/10 space-y-5">
           <div>
             <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Name</label>
-            <input type="text" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
+            <input type="text" name="name" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
           </div>
           <div>
             <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Email</label>
-            <input type="email" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
+            <input type="email" name="email" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required>
           </div>
           <div>
             <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">I am writing as</label>
-            <select class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep">
+            <select name="role" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep">
               <option>Researcher / member</option>
               <option>Funder / donor</option>
               <option>Partner institution</option>
@@ -886,7 +886,7 @@ systematically underrepresented in current research.</span>
           </div>
           <div>
             <label class="block text-lg uppercase tracking-wide text-ink/50 mb-2">Message</label>
-            <textarea rows="4" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required></textarea>
+            <textarea name="message" rows="4" class="w-full rounded-lg border border-ink/15 bg-white px-4 py-3 text-lg focus:outline-none focus:border-skydeep" required></textarea>
           </div>
           <button type="submit" class="w-full bg-skydeep text-white py-3.5 rounded-full font-medium hover:bg-blue transition">Send message</button>
           <p id="formNote" class="hidden text-lg text-skydeep text-center">Thank you — this is a demo form. Connect it to your inbox before publishing.</p>
